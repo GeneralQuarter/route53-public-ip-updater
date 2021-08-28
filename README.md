@@ -29,6 +29,14 @@ PUBLIC_IP_GET_URL=https://ifconfig.me
 REFRESH_RATE_MS=60000
 ```
 
+## Run
+
+with `.env` file (see above)
+
+```
+docker run -it --env-file .env generalquarter/route53-public-ip-updater:latest
+```
+
 ## Build
 
 ```
