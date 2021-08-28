@@ -10,8 +10,8 @@ Run this docker image on your server and it will automatically update the A reco
 
 Here are the required environment variables:
 
-```
-# AWS - the IAM user will need access to write ChangeResourceRecordSets on the hosted id that you configure below
+```Shell
+# AWS - the IAM user will need access to write ChangeResourceRecordSets on the hosted zone id that you configure below
 AWS_ACCESS_KEY_ID=***
 AWS_SECRET_ACCESS_KEY=***
 # This needs to be set even if route 53 is global
@@ -33,13 +33,13 @@ REFRESH_RATE_MS=60000
 
 with `.env` file (see above)
 
-```
+```Shell
 docker run -it --env-file .env generalquarter/route53-public-ip-updater:latest
 ```
 
 ## Build
 
-```
+```Shell
 npm i
 
 npm run build
